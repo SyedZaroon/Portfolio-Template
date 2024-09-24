@@ -1,0 +1,38 @@
+@use "colors" as *;
+@use "mixins" as *;
+
+.main--heading{
+   @include heading(50px);
+}
+
+.secondary--heading {
+@include heading(30px);
+}
+
+.sub--heading{
+    @include heading(20px);
+}
+
+.navigation{
+    @include body-text($secondary-color, 18px, semi-bold);
+}
+
+.bold--text{
+    @include body-text($secondary-color, 20px, 600);
+}
+
+.light--text{
+    @include body-text($secondary-color, 18px, 400);
+}
+
+.bold--text--color{
+    @include body-text($primary-color, 20px, 600);
+}
+
+.light--text--color{
+    @include body-text($primary-color, 18px, 400);
+}
+
+.sub--text{
+    @include body-text(#BCBCBD, 16px, 500);
+}

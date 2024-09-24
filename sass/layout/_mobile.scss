@@ -1,0 +1,79 @@
+@use "../abstracts/" as *;
+@use "flex" as *;
+
+
+@include responsive(mobile){
+
+    .hero-section{
+
+        flex-wrap: wrap !important;
+
+        &__user-details{
+            flex-wrap: wrap !important;
+        }
+    }
+
+    /////////////////////   About us /////////////////////////////////
+    
+    .about-me{
+        flex-wrap: wrap !important;
+
+        &__left-side{
+            width: 100% !important;
+        }
+
+        &__right-side{
+            width: 100% !important;
+        }
+    }
+
+    /////////////////////   My Project   /////////////////////////////////
+    
+    .project{
+
+        &__tab-content{
+
+            &__grid{
+
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+    }
+
+    /////////////////////   Contact   /////////////////////////////////
+
+
+.contact{
+
+        &__section{
+        flex-wrap: wrap !important;
+        gap: 50px !important;
+        justify-content: flex-start !important;
+
+
+        &__main__form{
+            flex-basis: 100% !important;
+        }
+
+        &__detials{
+            flex-wrap: wrap !important;
+            flex-direction: row !important;
+            flex-basis: 100% !important;
+            justify-content: center !important;
+
+            &__phone__details{
+
+                align-items: center !important;
+                flex-basis: 40% !important;
+
+    
+            }
+
+        }
+        }
+
+    }
+
+    
+}
+

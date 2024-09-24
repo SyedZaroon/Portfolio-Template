@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+@use "flex" as *;
+
+.header{
+    @include flex(space-between, center,0px,row);
+    flex-wrap: wrap;
+     @include padding();
+    
+    position: sticky;
+    top: 0;
+    background-color: #2A2B2F;
+
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
+
+    z-index: 10;
+
+    &__mobile__menu{
+        display: none;
+}
+
+.navigation-links ul>li{
+    display: inline;
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+
+ @include responsive(tablet){
+
+    padding: 20px 50px;
+    gap: 0;
+
+    .navigation-links{
+        display: none;
+    }
+
+    &__mobile__menu{
+        display: block;
+        color: white;
+        font-size: 24px;
+    }
+ }
+
+}
+
+

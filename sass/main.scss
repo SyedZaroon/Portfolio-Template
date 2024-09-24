@@ -1,0 +1,295 @@
+@use "base" as *;
+@use "abstracts" as *;
+@use "components" as *;
+@use "layout" as *;
+@use "utilities" as *;
+@use "vendor" as *;
+
+
+//////////////////// Hero Section//////////////
+
+.hero-section{
+    @include flex(space-between ,center ,0px, row);
+    @include padding();
+    @include margin();
+
+    &__social-links {
+
+         position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 200px;
+            background-color: $secondary-color;
+            bottom: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 200px;
+            background-color: $secondary-color;
+            top: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &> ul > li{
+
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+
+
+    &__user-details{
+         @include flex(flex-start ,start ,10px, column);
+
+             &__buttons{
+        @include flex(flex-start ,start ,10px ,row);
+    }
+    }
+
+    &__img{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+//////////////////// About me //////////////
+/// 
+.about-me{
+    @include flex(space-between, center, 1px, row);
+    @include padding();
+    @include margin();
+
+    &__left-side{
+        width: 40%;
+
+    &__img{
+        width: 400px;
+        height: 500px;
+    }
+}
+
+    &__right-side{
+         width: 60%;
+         @include flex(flex-start, start, 20px, column);
+
+        &__icons>ul>li{
+            display: inline-block;
+            margin-right: 20px;
+
+     }
+}
+}
+
+/////////////////////Services////////////////////
+
+.services{
+
+    @include margin();
+    @include padding();
+
+    &__cards{
+    @include flex(center,center,50px,row);
+    margin-top:70px;
+
+}
+}
+
+//////////////////////////////////////Projects//////////////////////////////////////////////////////////
+.project{
+    @include padding();
+    @include margin();
+
+    &__tabs{
+    @include flex(space-around,center,0px,row);
+    margin:50px 0;
+
+    &__tabsname{
+       position: relative;
+       border-bottom: 2px solid $primary-color;
+       padding-bottom: 5px;
+
+       &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primary-color;
+        transition: width 0.3s ease;
+       }
+    &:hover::after{
+        width: 100%;
+    }
+     &:hover{
+        border: 0;
+    }
+
+}
+    }
+
+    &__tab-content{
+        display: flex;
+    }
+
+    &__tab-content__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        width: max-content;
+        margin: auto;
+
+  &__img-container{
+
+    position: relative; 
+    
+      &::before{
+    position: absolute;
+    content: '\f002';
+    font-family: 'FontAwesome';
+    color: $secondary-color;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+      &:hover::before{
+        opacity: 1;
+        top:40%;
+    }
+
+    &::after{
+    position: absolute;
+    content: "Know More";
+    border-bottom: 1px solid $secondary-color;
+    color: $secondary-color;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+      &:hover::after{
+        opacity: 1;
+        bottom:35%;
+    }
+
+    &__img{
+    
+    border-radius: 5px;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  transition: opacity 0.3s ease;
+
+   &:hover{
+    opacity: 0.1; /* Shows the icon on hover */
+
+  }
+
+  }
+}
+    }
+}
+
+
+
+//////////////////////////////////////Testimonails//////////////////////////////////////////////////////////
+.testimonials{
+    @include padding();
+    @include margin();
+
+    &__item{
+    margin-top: 50px;
+    padding: 0 150px;
+    @include flex(space-around, center, 40px, row);
+
+    &__img{
+
+        width: 250px;
+        height: 250px;
+    }
+
+    &__details{
+
+        &__description{
+            padding-bottom: 20px;
+        }
+
+        &__user{
+            @include flex(flex-start,center,10px,row);
+
+            &__line{
+                width: 30%;
+                height: 2px;
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+}
+
+}
+///////////////////////Contact Details////////////////////////////////
+
+.contact{
+    
+    @include margin();
+    @include padding();
+
+    &__section{
+
+    position: relative;
+    margin-top: 100px;
+    
+
+    @include flex(space-around,center,50px,row);
+
+    &__main__form{
+
+        position: relative;
+        
+        &::after{
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 300px;
+            background-color: $primary-color;
+            top: 50%;
+            right: -30%;
+            transform: translatey(-50%);
+        }
+    }
+
+
+    &__detials{
+
+        @include flex(flex-start,start,30px,column);
+        
+        &__phone__details{
+            @include flex(flex-start,start,10px,column);
+
+            &__icons>ul>li{
+        display: inline-block;
+        color: $secondary-color;
+        font-size: 20px;
+        margin-right: 20px;
+
+        &:hover{
+            color: $primary-color;
+        }
+     }
+        }
+    }
+}
+
+}

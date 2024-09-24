@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+@use "flex" as *;
+
+
+@include responsive(tablet){
+
+    .hero-section{
+
+        &__social-links{
+
+            display: none;
+        }
+    }
+
+    ////////////////////////   Services    ///////////////////////////
+    /// 
+    
+    .services{
+
+        &__cards{
+        flex-wrap: wrap;
+    }
+    }
+
+    ////////////////////////   Projects    ///////////////////////////
+    /// 
+    /// 
+    
+    ////////////////////////   Testimonails    ///////////////////////////
+    /// 
+    /// 
+    
+    .testimonials{
+
+        &__item{
+            flex-wrap: wrap;
+            padding: 0 !important;
+        }
+    }
+    
+    ////////////////////////   Testimonails    ///////////////////////////
+    /// 
+    /// 
+
+    .contact{
+  
+        &__section{
+
+            &__main__form{
+
+                &::after{
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+}

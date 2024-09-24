@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+@use "../layout/" as *;
+
+.services__cards__cardbox{
+
+    &:nth-child(odd){
+    @include flex(space-between, center,20px,column);
+    border: 1px solid $primary-color;
+    padding: 80px 30px;
+    border-radius: 5px;
+}
+
+    &:nth-child(even){
+        @include flex(space-between, center,20px,column);
+        border: 1px solid $primary-color;
+        padding: 100px 30px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px rgba($color: #000000, $alpha: 1.0);
+    }
+
+
+    &:hover{
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+}
+}
+
+

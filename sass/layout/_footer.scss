@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+@use "flex" as *;
+
+.footer{
+    @include flex(space-between,center,0px,row);
+    background-color: #2A2B2F;
+    @include padding();
+
+    &__icons>ul>li{
+        display: inline;
+        color: white;
+        margin-left: 10px;
+        font-size: 20px;
+
+        &:hover{
+            color: $primary-color;
+        }
+
+    }
+
+    @include responsive(tablet){
+        flex-wrap: wrap;
+    }
+
+     @include responsive(mobile){
+        gap: 10px;
+    }
+
+}

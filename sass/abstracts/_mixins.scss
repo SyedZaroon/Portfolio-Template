@@ -1,0 +1,46 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+@use "breakpoints" as *;
+@use "colors" as *;
+
+@mixin heading($font-size) {
+  color: $primary-color;
+  font-family: $font-body;
+  font-weight: bold;
+  font-size: $font-size;
+  -webkit-text-stroke: 1px black; // Note: This property is only supported in WebKit browsers
+  text-transform: uppercase;
+}
+
+@mixin body-text($font-color, $font-size, $font-weight ) {
+  color: $font-color;
+  font-family: $font-body;
+  font-weight: $font-weight;
+  font-size: $font-size;
+}
+
+////////////////// Padding Mixin /////////////////////////////
+
+@mixin padding{
+  padding: 30px 50px;
+
+    @include responsive(tablet) {
+    padding: 20px 50px;
+  }
+
+}
+
+////////////////// Margin Mixin /////////////////////////////
+
+@mixin margin {
+  margin: 100px auto; 
+
+  @include responsive(tablet) {
+    margin: 50px auto;
+  }
+
+  @include responsive(mobile) {
+    margin: 30px auto;
+  }
+}

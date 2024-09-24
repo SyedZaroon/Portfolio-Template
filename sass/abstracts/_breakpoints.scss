@@ -1,0 +1,13 @@
+// Mixin for responsive breakpoints
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 550px) { @content; }
+  }
+  @else if $breakpoint == tablet {
+    @media (max-width: 844px) { @content; }
+  }
+  @else if $breakpoint == desktop {
+    @media (min-width: 1024px) { @content; }
+  }
+}
+

@@ -1,0 +1,31 @@
+@use "../abstracts/" as *;
+
+body {
+    background-color: $bg-color;
+    
+    font-family: $font-body;
+}
+
+.fab{
+    color: $secondary-color;
+    font-size: 24px;
+
+    &:hover{
+
+        color: $primary-color;
+    }
+}
+
+.heading--underline{
+     position: relative;
+
+     &::after{
+          content: '';
+      position: absolute;
+      bottom: -20px; 
+      left: 50%; 
+      transform: translateX(-50%); 
+      width: 10%; 
+      border-bottom: 3px solid $primary-color; 
+}
+}
