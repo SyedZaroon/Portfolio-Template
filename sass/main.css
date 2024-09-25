@@ -329,6 +329,10 @@ form input, form textarea {
   border-radius: 5px;
   padding: 10px;
   width: 100%;
+  color: #FFFFFF;
+}
+form input:focus::placeholder, form textarea:focus::placeholder {
+  color: transparent;
 }
 form ::placeholder {
   color: #FFA688;
@@ -359,7 +363,7 @@ form ::placeholder {
 
 .hero-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   gap: 0px;
