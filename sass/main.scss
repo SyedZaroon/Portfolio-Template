@@ -9,7 +9,7 @@
 //////////////////// Hero Section//////////////
 
 .hero-section{
-    @include flex(space-between ,center ,0px, row);
+    @include flex(space-evenly ,center ,0px, row);
     @include padding();
     @include margin();
 
